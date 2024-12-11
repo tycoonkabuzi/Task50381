@@ -60,3 +60,35 @@ footer {
     order: 3;
   }
 }
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  }
+  header,
+  footer {
+    height: 10vh;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 2vh;
+  }
+  .container-content {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+    flex-shrink: auto auto auto;
+  }
+  aside[direction="left"] {
+    order: 1;
+  }
+  section {
+    order: 2;
+  }
+  aside[direction="right"] {
+    order: 3;
+  }
+  footer {
+    order: 3;
+  }
+}
