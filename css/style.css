@@ -4,35 +4,47 @@
 body {
   color: white;
 }
-header {
+.main-header {
   background-color: red;
+  text-align: center;
 }
-aside[direction="left"] {
+.left {
   background-color: green;
+  width: 25%;
 }
-aside[direction="right"] {
+
+.right {
   background-color: pink;
+  width: 25%;
 }
-section {
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.container-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.text-section {
   background-color: rgb(29, 188, 241);
+  width: 50%;
 }
-footer {
+
+.main-footer {
   background-color: rgb(163, 94, 175);
+  text-align: center;
 }
 @media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: column;
     font-size: 40px;
   }
   .container-content {
-    display: flex;
-    flex-direction: column;
     order: 2;
   }
 
-  header,
-  footer {
+  .main-header,
+  .main-footer {
     height: 15vh;
     text-align: center;
     box-sizing: border-box;
@@ -40,93 +52,90 @@ footer {
   }
 
   aside,
-  section {
+  .text-section {
     height: 50vh;
     text-align: center;
   }
-  aside[direction="left"] {
+  .left {
+    width: 100%;
     order: 2;
   }
-  aside[direction="right"] {
+  .right {
+    width: 100%;
     order: 3;
   }
-  section {
+  .text-section {
+    width: 100%;
     order: 1;
   }
-  header {
+  .main-header {
     order: 1;
   }
-  footer {
+  .main-footer {
     order: 3;
   }
 }
 @media (min-width: 992px) {
   .container {
-    display: flex;
-    flex-direction: column;
     font-size: 30px;
   }
-  header,
-  footer {
+  .main-header,
+  .main-footer {
     height: 10vh;
     text-align: center;
     box-sizing: border-box;
     padding-top: 2vh;
   }
   .container-content {
-    display: flex;
     flex-direction: row;
     order: 2;
-    flex-shrink: auto auto auto;
   }
-  aside[direction="left"] {
+  .left {
     order: 1;
   }
-  section {
+  .text-section {
     order: 2;
   }
-  aside[direction="right"] {
+  .right {
     order: 3;
   }
-  footer {
+  .main-footer {
     order: 3;
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
-    display: flex;
-    flex-direction: column;
     font-size: 30px;
-    text-align: center;
   }
-  .container-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  aside[direction="right"] {
+
+  .right {
     width: 20%;
     order: 2;
   }
-  aside[direction="left"] {
+  .left {
     width: 100%;
     height: 50vh;
     order: 3;
   }
-  section {
+  .text-section {
     order: 1;
     width: 80%;
     height: auto;
   }
-  header,
-  footer {
+  .main-header,
+  .main-footer {
     height: 10vh;
     text-align: center;
     box-sizing: border-box;
     padding-top: 2vh;
   }
 
-  footer {
+  .main-footer {
     order: 3;
   }
+}
+.mainheader {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
