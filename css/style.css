@@ -46,7 +46,6 @@ body {
   .main-header,
   .main-footer {
     height: 15vh;
-    text-align: center;
     box-sizing: border-box;
     padding-top: 2.5vh;
   }
@@ -54,7 +53,6 @@ body {
   aside,
   .text-section {
     height: 50vh;
-    text-align: center;
   }
   .left {
     width: 100%;
@@ -82,7 +80,6 @@ body {
   .main-header,
   .main-footer {
     height: 10vh;
-    text-align: center;
     box-sizing: border-box;
     padding-top: 2vh;
   }
@@ -126,7 +123,6 @@ body {
   .main-header,
   .main-footer {
     height: 10vh;
-    text-align: center;
     box-sizing: border-box;
     padding-top: 2vh;
   }
@@ -134,8 +130,4 @@ body {
   .main-footer {
     order: 3;
   }
-}
-.mainheader {
-  display: grid;
-  grid-template-columns: auto auto auto;
 }
